@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
+use Zap\Models\Concerns\HasSchedules;
 
 class User extends Authenticatable implements FilamentUser
 {
@@ -18,6 +19,7 @@ class User extends Authenticatable implements FilamentUser
     use HasPanelShield;
     use HasRoles;
     use Notifiable;
+    use HasSchedules;
 
     protected $hidden = [
         'password',
