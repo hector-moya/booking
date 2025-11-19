@@ -1,0 +1,34 @@
+models:
+  Invoice:
+    number: string
+    date: date
+    amount: float
+    customer_id: integer
+    status: string
+    relationships:
+      belongsTo: Customer
+  Customer:
+    name: string
+    email: string
+    phone: string
+    address: string
+    relationships:
+      hasMany: Invoice, CustomerNote
+  CustomerNote:
+    customer_id: integer
+    note: text
+    relationships:
+      belongsTo: Customer
+  Organization:
+    name: string
+    address: string
+    phone: string
+    email: string
+    relationships:
+      hasMany: User
+  SocialAccount:
+    customer_id: integer
+    platform: string
+    username: string
+    relationships:
+      belongsTo: Customer
