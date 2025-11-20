@@ -18,8 +18,8 @@ class User extends Authenticatable implements FilamentUser
 
     use HasPanelShield;
     use HasRoles;
-    use Notifiable;
     use HasSchedules;
+    use Notifiable;
 
     protected $hidden = [
         'password',
