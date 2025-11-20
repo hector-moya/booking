@@ -6,7 +6,7 @@ models:
     customer_id: integer
     status: string
     relationships:
-      belongsTo: Customer
+      belongsTo: Customer, Organization
   Customer:
     name: string
     email: string
