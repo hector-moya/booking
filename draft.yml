@@ -32,6 +32,16 @@ models:
     username: string
     relationships:
       belongsTo: Customer
+  Task:
+    title: string
+    description: text
+    due_date: date
+    status: string
+    assigned_to: integer
+    taskable_type: string
+    taskable_id: integer
+    relationships:
+      belongsToPolymorphic: taskable (Customer, Organization)
 
 
 
