@@ -13,7 +13,7 @@ models:
     phone: string
     address: string
     relationships:
-      hasMany: Invoice, CustomerNote
+      hasMany: Invoice, CustomerNote, Organization
   CustomerNote:
     customer_id: integer
     note: text
@@ -32,3 +32,6 @@ models:
     username: string
     relationships:
       belongsTo: Customer
+
+
+
