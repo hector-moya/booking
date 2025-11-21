@@ -14,6 +14,7 @@ class ActivityPolicy
 
     public function viewAny(AuthUser $authUser): bool
     {
+        
         return $authUser->can('view_any_activity');
     }
 
